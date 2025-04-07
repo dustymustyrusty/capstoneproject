@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Salton Sea's Visual Decline</title>
+        <link rel="stylesheet" href="../saltonsea.css"> <!-- Link to shared CSS -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="history.html">The Salton Sea's Complex History</a>
+        <a href="airquality.html">Air Quality Impact</a>
+        <a href="seaanalysis.html">Data Analysis</a>
+        <a href="visualsea.html" >The Salton Sea's Visual Decline</a>
+        <a href="faqsea.html" class="active" >Salton Sea FAQ</a>
+    </nav>
+    
+    <div class="page-header">
+        <div class="overlay">
+            <h1>Salton Sea FAQ</h1>
+        </div>
+    </div>
+    <div class="content-box">
+        <h2>Frequently Asked Questions</h2>
+        <label for="faqSelect">Choose a question:</label>
+        <select id="faqSelect" onchange="showAnswer()">
+            <option value="">--Select a question--</option>
+            <option value="q1">What is the Salton Sea?</option>
+            <option value="q2">Why is the Salton Sea shrinking?</option>
+            <option value="q3">Is the Salton Sea safe to visit?</option>
+        </select>
+        <p id="answer"></p>
+    </div>
+    
+    <script>
+        function showAnswer() {
+            var answers = {
+                q1: "The Salton Sea is a large, shallow, saline lake located in California's Imperial and Coachella Valleys.",
+                q2: "The Salton Sea is shrinking due to reduced water inflows from agricultural runoff and increasing evaporation.",
+                q3: "The Salton Sea is generally safe to visit, but poor air quality and high salinity levels can pose risks in certain conditions."
+            };
+            
+            var select = document.getElementById("faqSelect");
+            var answer = document.getElementById("answer");
+            
+            answer.textContent = answers[select.value] || "";
+        }
+    </script>
+</body>
+</html>
