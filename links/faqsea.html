@@ -22,34 +22,46 @@
             <h1>Salton Sea FAQ</h1>
         </div>
     </div>
-    <div class="content-box">
-        <h2>Frequently Asked Questions</h2>
-        <label for="faqSelect">Choose a question:</label>
-        <select id="faqSelect" onchange="showAnswer()">
-            <option value="">--Select a question--</option>
-            <option value="q1">What is the Salton Sea?</option>
-            <option value="q2">Why is the Salton Sea shrinking?</option>
-            <option value="q3">Is the Salton Sea safe to visit?</option>
-            <option value="q4">Is the Salton Sea safe to visit?</option>
-        </select>
-        <p id="answer"></p>
-    </div>
-    
-    <script>
-        function showAnswer() {
-            var answers = {
-                q1: "The Salton Sea is a large, shallow, saline lake located in California's Imperial and Coachella Valleys.",
-                q2: "The Salton Sea is shrinking due to reduced water inflows from agricultural runoff and increasing evaporation.",
-                q3: "The Salton Sea is generally safe to visit, but poor air quality and high salinity levels can pose risks in certain conditions."
-                q4: "The Salton Sea is generally safe to visit, but poor air quality and high salinity levels can pose risks in certain conditions."
-  
-            };
-            
-            var select = document.getElementById("faqSelect");
-            var answer = document.getElementById("answer");
-            
-            answer.textContent = answers[select.value] || "";
-        }
-    </script>
+<div class="content-box">
+    <h2>Frequently Asked Questions</h2>
+    <label for="faqSelect">Choose a question:</label>
+    <select id="faqSelect" onchange="showAnswer()">
+        <option value="">--Select a question--</option>
+        <option value="q1">What is the Salton Sea?</option>
+        <option value="q2">Why is the Salton Sea shrinking?</option>
+        <option value="q3">Is the Salton Sea safe to visit?</option>
+        <option value="q4">Where is the Salton Sea located?</option>
+        <option value="q5">How was the Salton Sea formed?</option>
+        <option value="q6">Can you swim in the Salton Sea?</option>
+        <option value="q7">What kind of wildlife lives around the Salton Sea?</option>
+        <option value="q8">What environmental issues affect the Salton Sea?</option>
+        <option value="q9">Are there efforts to save the Salton Sea?</option>
+        <option value="q10">Is fishing allowed in the Salton Sea?</option>
+    </select>
+    <p id="answer"></p>
+</div>
+
+<script>
+    function showAnswer() {
+        var answers = {
+            q1: "The Salton Sea is a large, shallow, saline lake located in California's Imperial and Coachella Valleys.",
+            q2: "The Salton Sea is shrinking due to reduced water inflows from agricultural runoff and increasing evaporation.",
+            q3: "The Salton Sea is generally safe to visit, but poor air quality and high salinity levels can pose risks in certain conditions.",
+            q4: "The Salton Sea is located in Southern California, between Imperial County and Riverside County.",
+            q5: "The Salton Sea was formed in 1905 when the Colorado River breached irrigation canals and flooded the Salton Sink.",
+            q6: "Swimming is technically allowed, but the high salinity and pollution make it unpleasant and potentially unsafe.",
+            q7: "The area is home to migratory birds, fish like tilapia, and other wildlife, though populations are declining due to environmental stress.",
+            q8: "Major environmental issues include water pollution, shrinking shorelines, toxic dust from exposed lakebed, and fish die-offs.",
+            q9: "Yes, there are several ongoing restoration and mitigation projects at the state and local level, though progress has been slow.",
+            q10: "Fishing is allowed, but only certain species like tilapia remain, and consumption advisories are in place due to pollution."
+        };
+
+        var select = document.getElementById("faqSelect");
+        var answer = document.getElementById("answer");
+
+        answer.textContent = answers[select.value] || "";
+    }
+</script>
+
 </body>
 </html>
